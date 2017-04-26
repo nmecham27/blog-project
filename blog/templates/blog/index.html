@@ -2,8 +2,11 @@
     <ul>
     {% for post in latest_post_list %}
 	<div>
-        	<p>{{post.title}}</p>
+        	<h1>{{post.title}}</h1>
 		<p><br/>{{post.text}}</p>
+	</div>
+	<div class="date">
+		{{post.timeposted}}
 	</div>
     {% endfor %}
     </ul>
