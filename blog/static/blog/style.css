@@ -1,0 +1,21 @@
+.post {
+	padding:40px;
+	text-align:center;
+}
+
+body {
+	background-color:yellow;
+}
+
+a {
+	color:blue;
+	font-size:x-large;
+}
+
+a:hover {
+	color:red;
+}
+
+.newpost {
+	text-align:center;
+}

@@ -1,14 +1,18 @@
-<a href="{% url 'post_new' %}" class="top-menu">Add new post</a>
+{% load staticfiles %}
+
+<link rel="stylesheet" type="text/css" href="{% static 'blog/style.css' %}" />
+
+<div class="newpost">
+    <a href="{% url 'post_new' %}" class="top-menu">Add new post</a>
+</div>
 
 {% if latest_post_list %}
     <ul>
     {% for post in latest_post_list %}
-	<div>
+	<div class="post">
         	<h1>{{post.title}}</h1>
 		<p><br/>{{post.text}}</p>
-	</div>
-	<div class="date">
-		{{post.timeposted}}
+		<p><br/>{{post.timeposted}}</p>
 	</div>
     {% endfor %}
     </ul>
