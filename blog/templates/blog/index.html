@@ -2,12 +2,15 @@
 
 <link rel="stylesheet" type="text/css" href="{% static 'blog/style.css' %}" />
 
-<div class="newpost">
-    <a href="{% url 'post_new' %}" class="top-menu">Add new post</a>
-</div>
-
+<head>
+    <title>Noah's blog</title>
+</head>
 {% if latest_post_list %}
     <ul>
+    <h1>Noah's boring blog</h1>
+    <div class="newpost">
+        <a href="{% url 'post_new' %}" class="top-menu">Add new post</a>
+    </div>
     {% for post in latest_post_list %}
 	<div class="post">
         	<h1>{{post.title}}</h1>
@@ -17,6 +20,10 @@
     {% endfor %}
     </ul>
 {% else %}
+    <h1>Noah's boring blog</h1>
+    <div class="newpost">
+        <a href="{% url 'post_new' %}" class="top-menu">Add new post</a>
+    </div>
     <p>No blog posts to show yet.</p>
 {% endif %}
 

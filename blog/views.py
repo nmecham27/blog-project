@@ -13,7 +13,7 @@ class IndexView(generic.ListView):
 
     def get_queryset(self):
         """Return the last five published questions."""
-        return Post.objects.order_by('-timeposted')[:5]
+        return Post.objects.order_by('-timeposted')
 
 def post_new(request):
     if request.method == "POST":
